@@ -8,3 +8,4 @@ python-multipart
 pymongo
 email-validator
 pydantic
+PyJWT
