@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products | Kogoma Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/logo.png" class="logo" />
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="users.html">User Approvals</a>
+      <a href="products.html" class="active">Products</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="header-row">
+      <h1>Pharmacy Products</h1>
+      <a href="add-product.html" class="btn btn-add">+ Add Product</a>
+    </div>
+
+    <table class="users-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price (KES)</th>
+          <th>Stock</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="productsTable">
+        <!-- JS fills this -->
+      </tbody>
+    </table>
+  </main>
+
+<script src="products.js"></script>
+</body>
+</html>

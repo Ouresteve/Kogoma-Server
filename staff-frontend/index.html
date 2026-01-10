@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kogoma Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/logo.png" class="logo" />
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="users.html">User Approvals</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <h1>Admin Overview</h1>
+
+    <div class="cards">
+      <div class="card">👥 Total Users <span>0</span></div>
+      <div class="card">⏳ Pending Approvals <span>0</span></div>
+      <div class="card">💊 Products <span>0</span></div>
+    </div>
+  </main>
+<script>
+  const token = localStorage.getItem("token");
+  if (!token) {
+    window.location.href = "auth.html";
+  }
+
+  const payload = JSON.parse(atob(token.split(".")[1]));
+
+  if (payload.role !== "admin") {
+    alert("Unauthorized access");
+    window.location.href = "kogoma-health-solution.vercel.app/auth.html";
+  }
+</script>
+
+</body>
+</html>
