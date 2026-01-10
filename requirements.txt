@@ -6,3 +6,5 @@ python-jose
 passlib[bcrypt]
 python-multipart
 pymongo
+email-validator
+pydantic
