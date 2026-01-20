@@ -20,6 +20,7 @@ async def authenticate_user(email: str, password: str):
 
     payload = {
         "sub": str(user["_id"]),
+        "name": user["name"],
         "email": user["email"].lower().strip(),
         "role": user["role"]
     }
